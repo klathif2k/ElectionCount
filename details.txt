@@ -1,0 +1,10 @@
+The output of an Electronic Voting Machine(EVM) is a text file consisting of (voter_id, candidate_id) pairs. Suppose that voter_id is a 6-digit integer and candidate_id is a 3-digit integer. You are provided with two files, one containing a list of valid voter_ids only and another containing the consolidated output of EVMs from a constituency. Note that the exact values of voter_id and candidate_id are not revealed, i.e. you are not allowed to hard-code these values.
+
+
+Implement a Bloom filter to filter out invalid voters, i.e. you need to add only the list of voter_ids given in file 1 to your Bloom filter.
+Using the Bloom filter developed in step 1, store the set of valid (voter_id, candidate_id) pairs from file 2 in an array with direct addressing. To achieve this, implement the following methods in a class named ElectionCount. You must use appropriately sized arrays in the direct addressing scheme.
+
+
+ADD: Takes a (voter_id, candidate_id) pair from the given file as input, and stores it only if the voter_id is valid.
+FIND: Takes a voter_id as input and outputs the candidate_id for whom the vote was cast. If the voter_id is invalid, print "Invalid Voter".
+COUNT: Takes a candidate_id as input and outputs the total number of votes received by him/her.
